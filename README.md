@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# chenlian-website
 
-## Getting Started
+宸联教育官方网站 — OPC 一人公司孵化营 AI 实战落地页。
 
-First, run the development server:
+线上地址：[https://www.chenlian.ai](https://www.chenlian.ai)
+
+## 技术栈
+
+Next.js 16 · React 19 · Tailwind CSS v4 · shadcn/ui · TypeScript
+
+## 本地开发
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+cp .env.example .env.local   # 可选，默认已指向正式域名
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 常用命令
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm dev      # 开发
+pnpm build    # 构建
+pnpm start    # 生产预览
+pnpm lint     # 代码检查
+```
 
-## Learn More
+## 目录说明
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/app/              页面与全局样式
+src/components/       布局、区块、UI 组件
+src/lib/              站点文案与 GEO 事实数据
+public/images/        静态图片
+public/llms*.txt      AI 可读说明（GEO）
+docs/                 背景资料与设计稿
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 环境变量
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| 变量 | 说明 |
+|------|------|
+| `NEXT_PUBLIC_SITE_URL` | 站点根 URL，用于 canonical、JSON-LD、sitemap |
 
-## Deploy on Vercel
+## 主体信息
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+武汉宸联科技有限公司 · 宸联教育
